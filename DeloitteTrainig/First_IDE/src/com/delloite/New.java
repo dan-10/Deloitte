@@ -1,0 +1,23 @@
+package com.delloite;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class New {
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+//		Class.forName("oracle.jdbc.driver.OracleDriver");
+		
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system", "system");
+		
+		Statement st = con.createStatement();
+		
+		ResultSet rs = st.executeQuery("Select * from hr.mrk");
+	
+		while(rs.next()) {
+			System.out.println(rs.getString(1));
+		}
+	}
+}

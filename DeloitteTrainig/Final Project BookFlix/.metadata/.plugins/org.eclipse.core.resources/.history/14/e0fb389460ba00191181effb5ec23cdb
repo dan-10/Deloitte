@@ -1,0 +1,124 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="f" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>BookFlix</title>
+		<style type="text/css"><%@include file="/WEB-INF/views/styles/homeStyles.css" %></style>
+		<style>
+		
+	.AddBookForm { 
+	grid-area: AddBookForm; 
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: lighter;
+	padding-top: 50px; 
+	text-align: center;
+	}
+
+	.butn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3458d9;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #6672de;
+  text-decoration: none;
+}
+
+.td1{
+padding-left: 30px;
+}
+
+.td {
+  color: white;
+  width: 30%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #7dafff;
+  float: left;
+  padding: 12px 5px 12px 40px;
+}
+		</style>
+	</head>
+	
+	<body>
+		<div class="grid-container">
+		  <div class="Header">
+		  	<div class="heading">
+		  		<center>BookFlix</center>
+		  	</div>
+		  </div>
+		  <div class="Navigation">
+			<div class="navbar">
+				<a href="/home">Home</a>
+				<a href="/addBook">Add to your Library</a>
+				<a href="/borrow">Borrow Requests</a>
+				<a href="/help">Help</a>
+				<a href="/about">About</a>
+				<a href="/validate">LogIn/SignUp</a>
+				<c:if test="${!empty userName}">
+					<div class="dropdown">
+						<button class="dropbtn">${userName}
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="/myBooks">My Library</a>
+							<a href="/logout">LogOut</a>
+						</div>
+					</div>
+				</c:if>
+			</div>
+		  </div>
+		  </div>
+		  
+		 <!-- Book and user details area  -->
+		 <div class="AddBookForm">
+				<center>
+					
+					<f:form>
+						<table width="80%">
+							<tr>
+								<td class = "td1">Book Name:</td>
+								<td class = "td">${bookname}</td>
+							</tr>
+							
+							<tr>
+								<td class = "td1">Author:</td>
+								<td class = "td">${author}</td>
+							</tr>
+							<tr>
+								<td class = "td1">Book Owner</td>
+								<td class = "td">${owner}</td>
+							</tr>
+							<tr>
+								<td class = "td1">Location</td>
+								<td class = "td">${location}</td>
+							</tr>
+							<tr>
+								<td class = "td1">Status</td>
+								<td class = "td">${status}</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"><button type ="submit" value = "Add Book" class="butn">Borrow?</button></td>
+							</tr>
+						</table>
+					</f:form>
+				</center>
+			</div>
+	</body>
+</html>

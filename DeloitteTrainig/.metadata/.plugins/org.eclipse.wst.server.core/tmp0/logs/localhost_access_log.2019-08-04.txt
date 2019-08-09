@@ -1,0 +1,4 @@
+127.0.0.1 - - [04/Aug/2019:21:03:19 -0700] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [04/Aug/2019:21:03:20 -0700] "GET /SpringMVCDemo/Index.html HTTP/1.1" 200 608
+0:0:0:0:0:0:0:1 - - [04/Aug/2019:21:03:22 -0700] "GET /SpringMVCDemo/customer.html HTTP/1.1" 200 540
+0:0:0:0:0:0:0:1 - - [04/Aug/2019:21:03:32 -0700] "GET /SpringMVCDemo/customer.do?customerId=234&customerName=sdfg&customerAddress=sdfg&billAmount=456 HTTP/1.1" 200 229

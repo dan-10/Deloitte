@@ -1,0 +1,5 @@
+package com.bookflix.dao;
+
+public class MappingDAO {
+
+}

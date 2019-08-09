@@ -1,0 +1,42 @@
+package com.pms.deloitte.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.pms.deloitte.dao.ProductDAO;
+import com.pms.deloitte.model.Product;
+
+public class ProductServiceImpl implements ProductService{
+	@Autowired
+	ProductDAO productDAO;
+
+	@Override
+	public void addProduct(Product product) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteProduct(int productId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateProduct(Product product) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Product getAllProduct(int productId) {
+		Optional<Product> product = productDAO.findById(productId);
+		if(product != null)
+			return (Product)product;
+		return null;
+		
+	}
+	
+	
+}

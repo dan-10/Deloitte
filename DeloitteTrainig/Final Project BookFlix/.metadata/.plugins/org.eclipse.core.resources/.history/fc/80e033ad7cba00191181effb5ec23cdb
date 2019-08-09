@@ -1,0 +1,10 @@
+package com.bookflix.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(schema="HR", name="mapping")
+public class Mapping {
+
+}

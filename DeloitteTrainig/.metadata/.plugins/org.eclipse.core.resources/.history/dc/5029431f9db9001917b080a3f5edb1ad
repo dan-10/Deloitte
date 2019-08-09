@@ -1,0 +1,5 @@
+package com.bookflix.services;
+
+public interface LendService {
+	public void checkStatus(Book book);
+}

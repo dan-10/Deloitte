@@ -1,0 +1,18 @@
+
+public class Customer {
+	private String customerName;
+	public Customer() {
+		// TODO Auto-generated constructor stub
+	}
+	public Customer(String customerName) {
+		super();
+		this.customerName = customerName;
+	}
+	public String getCustomerName() {
+		return customerName;
+	}
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+	
+}

@@ -1,0 +1,90 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "Header Header Header Header Header Header Header Header Header Header Header Header" "Header Header Header Header Header Header Header Header Header Header Header Header" "Navigation Navigation Navigation Navigation Navigation Navigation Navigation Navigation Navigation Navigation Navigation Navigation" ". SearchPanel SearchPanel SearchPanel SearchPanel SearchPanel SearchPanel SearchPanel SearchPanel SearchPanel SearchPanel ." ". SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults ." ". SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults ." ". SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults ." ". SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults SearchResults ." ". . . . . . . . . . . ." ". . . . . . . . . . . ." ". . . . . . . . . . . .";
+}
+
+.Header { 
+	grid-area: Header;
+	background-color: #004fcf;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: xx-large;
+}
+
+.Navigation { 
+	grid-area: Navigation;
+	background-color: #7dafff;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: large; 
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.SearchPanel { 
+	grid-area: SearchPanel;
+	font-family: Arial;
+	font-size: 20px;
+	padding-top: 20px;
+}
+
+.SearchResults { 
+	grid-area: SearchResults;
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: lighter; 
+}
+
+.butn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #3458d9;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #6672de;
+  text-decoration: none;
+}
+
+input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+}
+
+input[type=text]:focus {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  padding: 12px 20px 12px 40px;
+}
+
+.b1{
+	font-family: Verdana;
+	font-size: 40px;
+	font-weight: lighter;
+	padding-top: 50px;
+}
+
+.b2{
+	font-family: Verdana;
+	font-size: 10px;
+	font-weight: lighter;
+	padding-top: 20px;
+}

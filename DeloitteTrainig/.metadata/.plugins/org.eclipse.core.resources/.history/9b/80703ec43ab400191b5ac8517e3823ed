@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>My Home page</h1>
+<a href = "self">This is it</a>
+<a href = "a.do">Clicked</a>
+</body>
+</html>

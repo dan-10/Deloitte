@@ -1,0 +1,35 @@
+package com.pms.deloitte.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pms.deloitte.dao.ProductDAO;
+import com.pms.deloitte.model.Product;
+import com.pms.deloitte.service.ProductService;
+
+@Controller
+public class ProductController {
+	
+	@Autowired
+	ProductService productservice;
+	
+		
+	@RequestMapping("/getProduct")
+	public Product getProduct(int Id) {
+		return productservice.getProductById(Id);
+	}
+	
+	@RequestMapping("/saveProduct")
+	public String saveProduct() {
+		Product product = new Product(111,"Bottle",1000,250);
+		productservice.addProduct(product);
+		return "Saving Product";
+	}
+	
+	@RequestMapping("/product")
+	public String getProduct(Model model) {
+		
+	}
+}

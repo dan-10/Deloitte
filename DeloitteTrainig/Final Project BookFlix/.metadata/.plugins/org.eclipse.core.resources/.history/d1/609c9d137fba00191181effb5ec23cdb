@@ -1,0 +1,94 @@
+package com.bookflix.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(schema="HR", name="mapping")
+public class Mapping {
+	@Id
+	private int bookId;
+	
+	@Column
+	private int ownerId;
+	
+	@Column
+	private int lessieId;
+	
+	@Column
+	private String bookName;
+	@Column
+	privat String lessieName;
+	
+	public Mapping() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Mapping(int bookId, int ownerId, int lessieId) {
+		super();
+		this.bookId = bookId;
+		this.ownerId = ownerId;
+		this.lessieId = lessieId;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + bookId;
+		result = prime * result + lessieId;
+		result = prime * result + ownerId;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Mapping other = (Mapping) obj;
+		if (bookId != other.bookId)
+			return false;
+		if (lessieId != other.lessieId)
+			return false;
+		if (ownerId != other.ownerId)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Mapping [bookId=" + bookId + ", ownerId=" + ownerId + ", lessieId=" + lessieId + "]";
+	}
+
+	public int getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+
+	public int getOwnerId() {
+		return ownerId;
+	}
+
+	public void setOwnerId(int ownerId) {
+		this.ownerId = ownerId;
+	}
+
+	public int getLessieId() {
+		return lessieId;
+	}
+
+	public void setLessieId(int lessieId) {
+		this.lessieId = lessieId;
+	}
+	
+	
+}

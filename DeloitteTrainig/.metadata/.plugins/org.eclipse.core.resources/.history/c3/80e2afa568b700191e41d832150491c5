@@ -1,0 +1,21 @@
+package com.pms.deloitte.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProductController {
+	
+	@Autowired
+	ProductDAO product = new ProductDAO()
+	@RequestMapping("/getProduct")
+	public String getProduct() {
+		return "Getting Product";
+	}
+	
+	@RequestMapping("/saveProduct")
+	public String saveProduct() {
+		return "Saving Product";
+	}
+}

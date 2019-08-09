@@ -1,0 +1,27 @@
+body {
+	background-image:url("image.jpg");
+	background-color:teal;	
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+table{
+	background-color:lime;
+	border:1px solid black;
+	vertical-align:bottom;
+	padding:5px;
+}
+h1 {
+	color: red;
+}
+
+h1.guest {
+	color:green;
+}
+
+h1.premium {
+	color:yellow;
+}
+
+h1.normal {
+	color:blue;
+}

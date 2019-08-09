@@ -1,0 +1,43 @@
+package com.deloitte;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class DController {
+	
+	@RequestMapping("/a")
+	public String gg() {
+		return "New";
+	}
+	
+	
+	@RequestMapping("/Add")
+	public String gg1() {
+		return "AddCustomer";
+	}
+	@RequestMapping("/Update")
+	public String gg2() {
+		return "UpdateCustomer";
+	}
+	@RequestMapping("/Delete")
+	public String gg3() {
+		return "DeleteCustomer";
+	}
+	@RequestMapping("/Find")
+	public String gg4() {
+		return "FindCustomer";
+	}
+	@RequestMapping("/FindAll")
+	public String gg5() {
+		return "FindAllCustomer";
+	}
+	@RequestMapping("/doSome")
+	public ModelAndView gg6() {
+		ModelAndView view = new ModelAndView();
+		view.addObject("message", "Hello, Today is Thursday. We'll Leave early");
+		view.setViewName("sayHello");
+		return view;
+	}
+}

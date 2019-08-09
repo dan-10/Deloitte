@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+function validate(){
+	var usern = document.getElementById("CustNameId").value;
+	var userp = document.getElementById("CustPass").value;
+	var userE = document.getElementById("error");
+	if(usern.length == 0 || userp.length == 0){
+		userE.innerHTML = "";
+		userE.innerHTML = "<h1>Please enter both username or password</h1>";
+		return false;
+	}else if(userp.length < 6){
+		alert("The password should be more than 6 characters ")	
+		return false;
+	}else{
+		alert("Most Welcome : " + usern);
+	}
+	}
+</script>
+</head>
+<body bgcolor = #f0f0f0>
+
+<center>
+<h1 >Login Page</h1>
+</center>
+
+<hr color = 'green' size = 2 width = 25%/>
+
+<form action = 'NewPage.html' onsubmit="return validate()">
+
+<table align = 'center' cellspacing = "4" cellpadding = "4">
+
+<tr>
+	<td>Login Id </td>
+	<td><input type = "text" id = "CustNameId" name = "CustName" placeholder = "Enter Login Id"></td>
+	<td><span id = "error"> </span></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type = "password" id = "CustPass" name = "CustName" placeholder = "Enter password"></td>
+<td><span></span></td>
+</tr>
+<tr>
+	<td><input type = "submit" id = "CustId" name = "CustName" value = "Submit"></td>
+	<td><input type = "reset" id = "CustId" name = "CustName" value = "Clear"></td>
+</tr>
+<tr>
+	<td><input type = "submit" value = "Go" onClick = "validate()"></td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>

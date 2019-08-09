@@ -1,0 +1,31 @@
+package com.deloitte.cms.dao;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class NewClient {
+public static void main(String[] args) {
+	
+	Configuration config = new Configuration().configure();
+	SessionFactory factory = config.buildSessionFactory();
+	Session session = factory.openSession();	
+	Transaction trans = session.beginTransaction();
+	Set s = new HashSet();
+	
+	EmployeeDetails emp1 = new EmployeeDetails(1,"Arun",1000);
+	EmployeeDetails emp2 = new EmployeeDetails(2,"Arun",1000);
+	EmployeeDetails emp3 = new EmployeeDetails(3,"Arun",1000);
+	trans.commit();
+	session.close();
+	
+	
+}
+}
+ 

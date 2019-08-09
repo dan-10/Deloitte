@@ -1,0 +1,48 @@
+package com.bookflix.controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bookflix.models.Book;
+import com.bookflix.models.SearchQuery;
+import com.bookflix.services.SearchService;
+
+/*
+ * author: anweshpatel
+ * created: 07/08/2019
+ * project: BookFlix
+ */
+
+@Controller
+public class SearchController {
+
+	@Autowired
+	SearchService searchService;
+	
+	@RequestMapping("/home")
+	public String homePage(Model model) {
+		model.addAttribute("searchQuery", new SearchQuery());
+		model.addAttribute("searchResult", null);
+		
+		return "home";
+	}
+	
+	@RequestMapping(value="/searchResults", method=RequestMethod.POST)
+	public String searchResults(@ModelAttribute("searchQuery") SearchQuery query, Model model) {
+		List<Book> searchResult = this.searchService.searchBooks(query);
+		model.addAttribute("searchQuery", query);
+		model.addAttribute("searchResult", searchResult);
+		System.out.println("Home loaded");
+		for(Book book: searchResult) {
+			System.out.println(book);
+		}
+		return "home";
+	}
+}

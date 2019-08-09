@@ -1,0 +1,9 @@
+package com.bookflix.services;
+
+import com.bookflix.models.Book;
+import com.bookflix.models.Users;
+
+public interface LendService {
+	public boolean checkStatus(Book book,Users user);
+	public Book getBookByRef(Integer bookRef);
+}

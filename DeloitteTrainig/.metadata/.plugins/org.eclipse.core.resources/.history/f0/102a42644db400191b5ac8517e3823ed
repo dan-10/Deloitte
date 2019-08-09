@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>My Home page</h1>
+<a href = "Add.do" target = "_blank">Add Customer</a><br>
+<a href = "Update.do" target = "_blank">Update Customer</a><br>
+<a href = "Delete.do" target = "_blank">Delete Customer</a><br>
+<a href = "Find.do" target = "_blank">Find Customer</a><br>
+<a href = "FindAll.do" target = "_blank">Find All Customer</a><br>
+<a href = "doSome.do" target = "_blank">Thursday!!!!!</a>
+<a href = "addCustomer.do" target = "_blank">Thursday!!!!!</a>
+
+</body>
+</html>

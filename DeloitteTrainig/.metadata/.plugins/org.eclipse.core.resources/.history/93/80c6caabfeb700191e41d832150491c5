@@ -1,0 +1,9 @@
+package com.pms.deloitte.service;
+
+import com.pms.deloitte.model.Product;
+
+public interface ProductService {
+	public void addProduct(Product product);
+	public void deleteProduct(int productId);
+	
+}

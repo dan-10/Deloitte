@@ -1,0 +1,57 @@
+package com.pms.deloitte.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.pms.deloitte.dao.ProductDAO;
+import com.pms.deloitte.model.Product;
+
+@Service("ProductService")
+public class ProductServiceImpl implements ProductService{
+	@Autowired
+	ProductDAO productDAO;
+
+	@Override
+	@Transactional
+	public void addProduct(Product product) {
+		productDAO.save(product);		
+	}
+
+	@Override
+	@Transactional
+	public void deleteProduct(int productId) {
+		Product product = new Product();
+		product.setProductId(productId);
+		productDAO.delete(product);
+	}
+
+	@Override
+	@Transactional
+	public void updateProduct(Product product) {
+		productDAO.save(product);
+		
+	}
+
+	@Override
+	@Transactional
+	public Product getProductById(int Id) {
+		Optional<Product> product = productDAO.findById(Id);
+		if(product.isPresent())
+			return product.get();
+		return null;
+	}
+
+	@Override
+	@Transactional
+	public List<Product> getAllProduct(int productId) {
+		return (List<Product>) productDAO.findAll();
+	}
+
+	
+	
+	
+}

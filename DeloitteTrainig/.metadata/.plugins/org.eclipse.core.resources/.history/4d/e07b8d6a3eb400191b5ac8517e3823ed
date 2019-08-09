@@ -1,0 +1,12 @@
+package com.deloitte;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class DController {
+	@RequestMapping("/New")
+	public String gg() {
+		return "New";
+	}
+}

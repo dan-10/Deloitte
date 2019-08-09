@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CustomerDOAImpl.java&apos; to &apos;SpringMVCDemo/src/com.deloitte.cms.controller&apos;&#x0D;&#x0A;- Original project: &apos;NewCMS&apos;&#x0D;&#x0A;- Destination element: &apos;SpringMVCDemo/src/com.deloitte.cms.controller&apos;&#x0D;&#x0A;- Original element: &apos;com.deloitte.cms.dao.impl.CustomerDOAImpl.java&apos;" description="Copy compilation unit" destination="=SpringMVCDemo/src&lt;com.deloitte.cms.controller" element1="/src&lt;com.deloitte.cms.dao.impl{CustomerDOAImpl.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1564715920297" units="1" version="1.0"/>
+</session>

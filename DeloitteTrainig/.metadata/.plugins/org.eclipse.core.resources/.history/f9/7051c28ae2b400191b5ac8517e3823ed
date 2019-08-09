@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action = "update.do">
+	CustomerId : <input type = "text" name = "customerId" id = "customerId">
+	CustomerName : <input type = "text" name = "customerName" id = "customerName">
+	CustomerAddress : <input type = "text" name = "customerAddress" id = "customerAddress">
+	BillAmount : <input type = "text" name = "billAmount" id = "billAmount">
+	<input type = "submit" value = "Press enter">
+	</form>
+</body>
+</html>

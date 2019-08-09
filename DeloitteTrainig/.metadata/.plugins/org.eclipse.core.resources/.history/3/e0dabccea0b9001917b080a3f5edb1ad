@@ -1,0 +1,23 @@
+package com.bookflix.services.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.bookflix.dao.LendDAO;
+import com.bookflix.models.Book;
+import com.bookflix.services.LendService;
+
+public class LendServiceImpl implements LendService{
+
+	@Autowired
+	LendDAO lendDAO;
+	
+	@Override
+	public void checkStatus(Book book) {
+		int id = book.getLessieId();
+		if(id == 0) {
+			
+		}
+		
+	}
+
+}

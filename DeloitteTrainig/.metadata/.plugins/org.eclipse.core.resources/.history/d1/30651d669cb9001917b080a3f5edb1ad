@@ -1,0 +1,9 @@
+package com.bookflix.services;
+
+import com.bookflix.models.Book;
+
+public interface AddBookService {
+
+	void addBooks(Book book);
+	
+}

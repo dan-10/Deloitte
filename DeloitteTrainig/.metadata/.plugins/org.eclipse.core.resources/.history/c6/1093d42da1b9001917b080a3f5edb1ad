@@ -1,0 +1,9 @@
+package com.bookflix.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.bookflix.models.Book;
+
+public interface LendDAO extends CrudRepository<Book, Integer>{
+
+}

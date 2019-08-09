@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="EmpoyeeDetails" table="hr.Employee">
+	
+		<id name="employeeId" type="int" column="EID">
+			<generator class="assigned"/>
+		</id>
+
+		<property name="employeeName" column="employeeName"/>
+		<property name="employeeSalary" column="employeeSalary"/>
+		
+
+	</class>
+	
+	<class name="Address" table="hr.Address">
+	
+		<id name="aId" type="int" column="aId">
+			<generator class="assigned"/>
+		</id>
+
+		<property name="city" column="city"/>
+		<property name="state" column="state"/>
+		
+
+	</class>
+	
+</hibernate-mapping>

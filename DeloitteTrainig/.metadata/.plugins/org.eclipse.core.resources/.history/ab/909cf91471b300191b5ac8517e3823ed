@@ -1,0 +1,16 @@
+package com.deloitte.cms.dao;
+
+import java.util.Set;
+
+public class EmployeeDetails {
+	
+	private int employeeId;
+	private int employeeName;
+	private int employeeSalary;
+	private Set employeeAddress;
+	
+public EmployeeDetails() {
+	// TODO Auto-generated constructor stub
+}
+
+}
